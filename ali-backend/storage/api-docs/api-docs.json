@@ -1,0 +1,728 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Shop API",
+        "version": "1.0.0"
+    },
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "paths": {
+        "/api/shop/register": {
+            "post": {
+                "tags": [
+                    "Shop Auth"
+                ],
+                "operationId": "register",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "email",
+                        "in": "formData",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "phone",
+                        "in": "formData",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "formData",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful request"
+                    },
+                    "401": {
+                        "description": "not authencation"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    }
+                }
+            }
+        },
+        "/api/shop/login": {
+            "post": {
+                "tags": [
+                    "Shop Auth"
+                ],
+                "operationId": "login",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "formData",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "formData",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful request"
+                    },
+                    "401": {
+                        "description": "not authencation"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    }
+                }
+            }
+        },
+        "/api/shop/allorder": {
+            "get": {
+                "tags": [
+                    "Shop's order"
+                ],
+                "operationId": "allOrder",
+                "responses": {
+                    "200": {
+                        "description": "successful request"
+                    },
+                    "401": {
+                        "description": "not authencation"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/shop/vieworder": {
+            "get": {
+                "tags": [
+                    "Shop's order"
+                ],
+                "operationId": "viewOrder",
+                "parameters": [
+                    {
+                        "name": "order_id",
+                        "in": "query",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful request"
+                    },
+                    "401": {
+                        "description": "not authencation"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/shop/updateorder": {
+            "post": {
+                "tags": [
+                    "Shop's order"
+                ],
+                "operationId": "updateOrder",
+                "parameters": [
+                    {
+                        "name": "order_id",
+                        "in": "formData",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "note",
+                        "in": "formData",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "deposit",
+                        "in": "formData",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful request"
+                    },
+                    "401": {
+                        "description": "not authencation"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/shop/rejectorder": {
+            "get": {
+                "tags": [
+                    "Shop's order"
+                ],
+                "operationId": "rejectOrder",
+                "parameters": [
+                    {
+                        "name": "order_id",
+                        "in": "query",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful request"
+                    },
+                    "401": {
+                        "description": "not authencation"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/shop/filterorder": {
+            "post": {
+                "tags": [
+                    "Shop's order"
+                ],
+                "operationId": "filterOrder",
+                "parameters": [
+                    {
+                        "name": "perpage",
+                        "in": "formData",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "page",
+                        "in": "formData",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "role",
+                        "in": "formData",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "date1",
+                        "in": "formData",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "date2",
+                        "in": "formData",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "price1",
+                        "in": "formData",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "price2",
+                        "in": "formData",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sort",
+                        "in": "formData",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "search",
+                        "in": "formData",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful request"
+                    },
+                    "401": {
+                        "description": "not authencation"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/shop/continueorder": {
+            "get": {
+                "tags": [
+                    "Shop's order"
+                ],
+                "operationId": "continueOrder",
+                "parameters": [
+                    {
+                        "name": "order_id",
+                        "in": "query",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful request"
+                    },
+                    "401": {
+                        "description": "not authencation"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/shop/createorder": {
+            "post": {
+                "tags": [
+                    "Shop's order"
+                ],
+                "operationId": "createOrder",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "properties": {
+                                "phone": {
+                                    "type": "string"
+                                },
+                                "description": {
+                                    "type": "string"
+                                },
+                                "note": {
+                                    "type": "string"
+                                },
+                                "deposit": {
+                                    "type": "string"
+                                },
+                                "payment": {
+                                    "type": "string"
+                                },
+                                "delivery_date": {
+                                    "type": "string"
+                                },
+                                "list_product": {
+                                    "type": "array",
+                                    "items": {
+                                        "properties": {
+                                            "product_id": {
+                                                "type": "integer"
+                                            },
+                                            "quality": {
+                                                "type": "integer"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                }
+                            }
+                        },
+                        "type": "json"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful request"
+                    },
+                    "401": {
+                        "description": "not authencation"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/shop/addproduct": {
+            "post": {
+                "tags": [
+                    "Shop's product"
+                ],
+                "operationId": "addProduct",
+                "parameters": [
+                    {
+                        "name": "product_name",
+                        "in": "formData",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "thumbnails",
+                        "in": "formData",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "cost",
+                        "in": "formData",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sell_price",
+                        "in": "formData",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "description",
+                        "in": "formData",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "image",
+                        "in": "formData",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "video",
+                        "in": "formData",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "product_key",
+                        "in": "formData",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful request"
+                    },
+                    "401": {
+                        "description": "not authencation"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/shop/listproduct": {
+            "get": {
+                "tags": [
+                    "Shop's product"
+                ],
+                "operationId": "listProduct",
+                "responses": {
+                    "200": {
+                        "description": "successful request"
+                    },
+                    "401": {
+                        "description": "not authencation"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/shop/viewproduct": {
+            "get": {
+                "tags": [
+                    "Shop's product"
+                ],
+                "operationId": "viewProduct",
+                "parameters": [
+                    {
+                        "name": "product_id",
+                        "in": "query",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful request"
+                    },
+                    "401": {
+                        "description": "not authencation"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/shop/updateproduct": {
+            "post": {
+                "tags": [
+                    "Shop's product"
+                ],
+                "operationId": "updateProduct",
+                "parameters": [
+                    {
+                        "name": "product_id",
+                        "in": "formData",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "product_name",
+                        "in": "formData",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "thumbnails",
+                        "in": "formData",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "cost",
+                        "in": "formData",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sell_price",
+                        "in": "formData",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "description",
+                        "in": "formData",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "image",
+                        "in": "formData",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "video",
+                        "in": "formData",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful request"
+                    },
+                    "401": {
+                        "description": "not authencation"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/shop/filterproduct": {
+            "post": {
+                "tags": [
+                    "Shop's product"
+                ],
+                "operationId": "filterProduct",
+                "parameters": [
+                    {
+                        "name": "perpage",
+                        "in": "formData",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "page",
+                        "in": "formData",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "date1",
+                        "in": "formData",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "date2",
+                        "in": "formData",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "price1",
+                        "in": "formData",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "price2",
+                        "in": "formData",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "search",
+                        "in": "formData",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful request"
+                    },
+                    "401": {
+                        "description": "not authencation"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/shop/chartShop": {
+            "get": {
+                "tags": [
+                    "Shop"
+                ],
+                "operationId": "chartShop",
+                "responses": {
+                    "200": {
+                        "description": "successful request"
+                    },
+                    "401": {
+                        "description": "not authencation"
+                    },
+                    "400": {
+                        "description": "bad request"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        }
+    },
+    "definitions": {},
+    "securityDefinitions": {
+        "bearerAuth": {
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header"
+        }
+    }
+}
