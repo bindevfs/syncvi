@@ -1,0 +1,12 @@
+export default {
+  ALL: 0,
+  PROCESSING: 1,
+  WAIT_FOR_PAY: 2,
+  PAID: 3,
+  CHECK_OUT: 4,
+  TRANSPORTED: 5,
+  COMPLETE_ORDER: 6,
+  REFUSE: 7,
+  CANCEL_ORDER: 8,
+  OTHER: 9
+}

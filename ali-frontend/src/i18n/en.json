@@ -1,0 +1,94 @@
+{
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "account": "Account",
+    "logout": "Logout"
+  },
+  "orders": {
+    "orders": "Orders",
+    "resource": "Resource",
+    "price": "Price",
+    "quality": "Quality",
+    "buy_later": "Buy later",
+    "provisional_total": "Provisional total",
+    "total_details": "Total Details",
+    "provisional_fee": "Provisional fee",
+    "provisional": "Provisional",
+    "current_rate" : "Current Rate",
+    "deposit": "Deposit",
+    "total": "Total",
+    "receivers_information": "Receiver's Information",
+    "nothing": "You have no items in your shopping cart",
+    "my_order": "My Order",
+    "order_id": "Order ID",
+    "list_product": "List Products",
+    "date_of_purchase": "Date of purchase",
+    "view_detail": "View Detail",
+    "status": "Status",
+    "product": "Product",
+    "other_products": "other products",
+    "deposited": "You have made a deposit",
+    "not_deposited": "You don't made a deposit",
+    "info_shop": "Information shop",
+    "details_orders": "Details Orders",
+    "payment_methods": "Payment Methods",
+    "order_tracking": "Order Tracking",
+    "back_order": "Go Back Order",
+    "direct_transfer": "Direct transfer",
+    "bank_transfer": "Bank transfer Visa, Master, JCB",
+    "name_account": "Name account",
+    "address_order": "Address Order",
+    "another_address": "You want to ship to another address?",
+    "new_address": "Add new address",
+    "expected_delivery_day": "Expected delivery 8 - 12 days",
+    "expected_delivery": "Expected delivery",
+    "post_comment": "Post Comment",
+    "add_comment": "Add comment",
+    "custom_comment": "Comments"
+  },
+  "status": {
+    "processing": "Processing",
+    "paid": "Payment orders",
+    "ready": "Packing - Ready to delivery",
+    "transported": "Being transported",
+    "successful_delivery": "Successful delivery",
+    "rejected": "The order was rejected",
+    "cancel": "Order canceled"
+  },
+  "action": {
+    "remove": "Remove",
+    "unchecked": "Unchecked",
+    "order": "Order"
+  },
+  "user": {
+    "name": "Name",
+    "phone": "Phone Numbers",
+    "address": "Address",
+    "default_address": "Default Address"
+  },
+  "messages": {
+    "notification": "Notification",
+    "error": "Error",
+    "confirm_message": "Confirm",
+    "cancel": "Cancel",
+    "confirm": {
+      "order": "Are you sure you want to order?",
+      "delete_product": "Do you want to delete this product?"
+    },
+    "errors": {
+      "order": "Order failed, please try again.",
+      "quality": "Error updating the quantity."
+    },
+    "success": {
+      "order": "You have successfully placed an order",
+      "quality": "Quantity has been updated."
+    }
+  },
+  "guide": {
+    "tips": "Tips",
+    "guide_order": "Guide Order",
+    "question_answer": "FAQ",
+    "terms_of_use": "Terms Of Use"
+  }
+}

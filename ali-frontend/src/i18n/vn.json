@@ -1,0 +1,97 @@
+{
+  "auth": {
+    "login": "Đăng nhập",
+    "register": "Đăng ký",
+    "account": "Tài khoản",
+    "logout": "Đăng xuất"
+  },
+  "orders": {
+    "orders": "Đơn hàng",
+    "resource": "Nguồn",
+    "price": "Giá",
+    "quality": "Số lượng",
+    "buy_later": "Để mua sau",
+    "provisional_total": "Tổng tạm tính",
+    "total_details": "Tổng tiền chi tiết",
+    "provisional_fee": "Phí tạm tính",
+    "provisional": "Tạm tính",
+    "current_rate" : "Tỉ giá hiện tại",
+    "deposit": "Đặt cọc",
+    "total": "Tổng",
+    "receivers_information": "Thông tin người nhận",
+    "nothing": "Không có sản phẩm nào trong giỏ hàng",
+    "my_order": "Đơn hàng của tôi",
+    "order_id": "Mã đơn hàng",
+    "list_product": "Danh sách sản phẩm",
+    "date_of_purchase": "Ngày mua",
+    "view_detail": "Xem chi tiết",
+    "status": "Trạng thái",
+    "product": "Sản phẩm",
+    "other_products": "sản phẩm khác",
+    "deposited": "Bạn đã đặt cọc",
+    "not_deposited": "Bạn chưa đặt cọc",
+    "info_shop": "Thông tin shop",
+    "details_orders": "Chi Tiết Đơn Hàng",
+    "payment_methods": "Phương thức thanh toán",
+    "order_tracking": "Theo dõi đơn hàng",
+    "back_order": "Quay lại đơn hàng",
+    "direct_transfer": "Chuyển khoản trực tiếp",
+    "bank_transfer": "Chuyển khoản ngân hàng",
+    "name_account": "Tên tài khoản",
+    "address_order": "Địa chỉ giao hàng",
+    "another_address": "Bạn muốn giao đến địa chỉ khác?",
+    "new_address": "Thêm địa chỉ giao hàng mới",
+    "expected_delivery_day": "Dự kiến giao hàng 8 - 10 ngày.",
+    "expected_delivery": "Dự kiến giao hàng",
+    "post_comment": "Nhận Xét",
+    "add_comment": "Viết nhận xét",
+    "custom_comment": "KHÁCH HÀNG NHẬN XÉT"
+  },
+  "status": {
+    "processing": "Đang xử lý",
+    "paid": "Thanh toán đơn hàng",
+    "ready": "Đóng gói - Sẵn sàng giao hàng",
+    "transported": "Đang vận chuyển",
+    "successful_delivery": "Giao hàng thành công",
+    "rejected": "Đơn hàng bị từ chối",
+    "cancel": "Đơn hàng bị hủy"
+  },
+  "action": {
+    "remove": "Xóa",
+    "unchecked": "Mua ngay",
+    "order": "Đặt Hàng"
+  },
+  "user": {
+    "name": "Họ tên",
+    "phone": "Số điện thoại",
+    "address": "Địa chỉ",
+    "default_address": "Địa chỉ mặc định"
+  },
+  "validate": {
+    "phone_digit": "Số điện thoại không được quá 10 chữ số."
+  },
+  "messages": {
+    "notification": "Thông Báo",
+    "error": "Lỗi",
+    "confirm_message": "Xác Nhận",
+    "cancel": "Hủy Bỏ",
+    "confirm": {
+      "order": "Bạn có chắc chắn muốn đặt hàng?",
+      "delete_product": "Bạn có muốn xóa sản phẩm này?"
+    },
+    "errors": {
+      "order": "Order thất bại, xin vui lòng thử lại.",
+      "quality": "Lỗi khi update số lượng."
+    },
+    "success": {
+      "order": "Bạn đã order thành công.",
+      "quality": "Số lượng đã được cập nhật."
+    }
+  },
+  "guide": {
+    "tips": "Mẹo",
+    "guide_order": "Hướng dẫn đặt hàng",
+    "question_answer": "Câu hỏi thường gặp",
+    "terms_of_use": "Điều khoản sử dụng"
+  }
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="animate.css">
+    <style>
+        .et-menu {
+            height: 70px;
+            width: 100%;
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
+            box-shadow: rgba(0, 0, 0, 0.8) 0px -4px 8px -4px;
+            background: rgb(255, 255, 255);
+        }
+
+        .et-container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            width: 80%;
+        }
+
+        .et-logo {
+            width: 30%;
+            height: 100%;
+            float: left;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .et-logo img {
+            padding: 10px
+        }
+
+        .et-form-order {
+            width: 60%;
+            display: inline-block;
+        }
+
+        .et-more-info {
+            width: 35%;
+            display: inline-block;
+        }
+
+        .et-form-order input {
+            height: 31px;
+            width: 280px;
+            margin: 16px;
+            padding-left: 10px;
+            padding-top: 4px;
+            padding-bottom: 5px;
+            border: 1px solid #7367F0;
+            color: #848080;
+            margin-right: 1px;
+        }
+
+        .et-btn-order {
+            padding: 13px;
+            background: #7367F0;
+            border: none;
+            color: #fff;
+            margin-right: 40px;
+        }
+
+        .et-cart-url {
+            text-decoration: none;
+            color: #ff4300;
+            border: 1px solid;
+            padding: 10px;
+        }
+
+        .et-popup {
+            position: relative;
+            top: 30%;
+            z-index: 999;
+            margin: auto;
+            width: 450px;
+            display: none;
+            background: #ffffff;
+            border-radius: 2px;
+        }
+
+        .et-overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .et-popup-close {
+            float: right;
+            margin-top: -24px;
+            margin-right: -12px;
+            border-radius: 13px;
+            background: red;
+            color: #fff;
+            border: none;
+            width: 22px;
+            height: 22px;
+        }
+
+        .et-popup-title {
+            background: #7367F0;
+            color: #fff;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .et-popup-content {
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        .et-popup-content span {
+            display: block;
+            padding-bottom: 25px;
+            font-weight: 500;
+        }
+
+        .et-login {
+            text-decoration: none;
+            border: 1px solid;
+            color: #7367F0;
+            padding: 10px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="" id="notlogin" style="width: 350px">
+        <div class="animated">
+            <div class="et-popup-title">
+                <span>BẠN CHƯA ĐĂNG NHẬP VÀO HỆ THỐNG</span>
+            </div>
+            <div class="et-popup-content">
+                <span>Bạn cần đăng nhập vào hệ thống để mua hàng</span>
+                <span><a target="_blank" href="http://ali33.ga/login" class="et-login">Đăng nhập</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="" id="logined" style="width: 350px">
+        <div class="animated">
+            <div class="et-popup-title">
+                <span>Welcome to SyncVi!</span>
+            </div>
+            <div class="et-popup-content">
+                <span>Truy cập đến các trang <a href="https://www.tmall.com/" target="_blank">tmall</a>... để mua hàng</span>
+                <span><a target="_blank" href="http://ali33.ga/list-cart" class="et-login">Đến giỏ hàng</a></span>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/sweetalert2@8.js"></script>
+    <script src="js/popup.js"></script>
+</body>
+
+</html>

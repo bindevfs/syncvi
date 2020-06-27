@@ -1,0 +1,42 @@
+{
+    "manifest_version": 2,
+    "name": "SyncVi",
+    "version": "1.0.0",
+    "browser_action": {
+      "default_icon": {
+      },
+      "default_title": "SyncVi Extension",
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [{
+            "matches": [
+                "https://detail.tmall.com/*",
+                "https://detail.tmall.hk/*",
+                "https://world.tmall.com/*",
+                "https://*.detail.tmall.com/*"
+            ],
+            "js": [
+                "js/jquery-3.4.1.min.js",
+                "js/sweetalert2@8.js",
+                "js/content.js"
+            ],
+            "css": [
+                "css/content.css",
+                "css/animate.css"
+            ]},
+            {
+            "matches": [
+                "http://ali33.ga/*"
+            ],
+            "js": [
+                "js/website.js"
+            ]
+            }],
+    "permissions": [
+        "storage",
+        "tabs",
+        "declarativeContent",
+        "<all_urls>"
+    ],
+    "web_accessible_resources": [ "*" ]
+}
